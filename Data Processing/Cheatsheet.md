@@ -89,6 +89,23 @@ for col in df_imputed:
 
 <br>
 
+<br>
+
+#### Replace NaN values with undefined:
+```python
+categorical = ['column_name1','column_name2', 'column_name3']
+
+
+for col in categorical:
+    df_imputed[col] = df_imputed[col].astype('category')
+    df_imputed[col] = df_imputed[col].cat.add_categories('Undefined')
+    df_imputed[col] = df_imputed[col].fillna('Undefined')
+    df_imputed[col] = df_imputed[col].astype('object')
+```
+
+
+<br>
+
 #### **Checklist data cleaning**
 
 <br>
