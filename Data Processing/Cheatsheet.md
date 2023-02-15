@@ -102,4 +102,4 @@ for col in df_imputed:
 - [ ] Check for outliners, check if the values are impossible or there was a typing error.
 - [ ] Check for missing values.
 - [ ] Determine how to resolve missing values
-- [ ] Add dummy values in necessary
+- [ ] Add dummy values if necessary
