@@ -1,6 +1,6 @@
 # Machine Learning Cheat Sheet
 
-This is a repository containing a cheat sheet for Machine Learning student.
+This is a repository containing a cheat sheet for Machine Learning students.
 
 ## Browse
 
