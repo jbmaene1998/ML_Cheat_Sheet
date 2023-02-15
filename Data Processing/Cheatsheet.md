@@ -86,9 +86,6 @@ for col in df_imputed:
         df_imputed.drop(columns=[col], inplace=Boolean boolean)                                     # delete original feature
 ```
 
-
-<br>
-
 <br>
 
 #### Replace NaN values with undefined:
@@ -104,6 +101,27 @@ for col in categorical:
 ```
 
 
+<br>
+
+#### Merge multiple categories in 1 category
+```python
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+```
+<br>
+
+<br>
+
+#### Merge multiple categories in 1 category based on a percentage
+```python
+threshold_percent = int value
+
+series = pd.value_counts(df_sparse['column_name'])
+mask = (series / series.sum() * 100).lt(threshold_percent)
+df_sparse['column_name']= np.where(df_sparse['column_name'].isin(series[mask].index),'new_category', df_sparse['column_name'])
+df_sparse['column_name'].value_counts()
+```
 <br>
 
 #### **Checklist data cleaning**
