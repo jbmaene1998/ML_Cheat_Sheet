@@ -94,7 +94,7 @@ for col in df_imputed:
 <br>
 
 
-- [ ] Check for duplicates. You can use .info() and check if the Non-Null Count has been chenged.
+- [ ] Check for duplicates. You can use .info() and check if the Non-Null Count has been changed.
 - [ ] Remove obeservations that you don't need.
 - [ ] Remove features you don't need. You can use .drop() for this.
 - [ ] Resolve typos in the features. For example you can use .capitalize().
@@ -102,4 +102,4 @@ for col in df_imputed:
 - [ ] Check for outliners, check if the values are impossible or there was a typing error.
 - [ ] Check for missing values.
 - [ ] Determine how to resolve missing values
-- [ ] Add dummy values in neccesairy
+- [ ] Add dummy values in necessary
