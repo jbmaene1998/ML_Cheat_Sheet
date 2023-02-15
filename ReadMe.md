@@ -4,6 +4,6 @@ This is a repository containing a cheat sheet for Machine Learning students.
 
 ## Browse
 
-[Data Processing](https://github.com/jbmaene1998/ML_Cheat_Sheet/blob/b97b5cf747cbe49dc0eed262754ea0ee43351ae1/Data%20Processing/Cheatsheet.md)
+[Data Cleaning](https://github.com/jbmaene1998/ML_Cheat_Sheet/blob/b97b5cf747cbe49dc0eed262754ea0ee43351ae1/Data%20Processing/Cheatsheet.md)
 
  
