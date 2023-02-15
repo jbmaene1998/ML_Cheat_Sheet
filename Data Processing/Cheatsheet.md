@@ -22,31 +22,6 @@ from scipy.stats import skew
 ### **Code**
 
 <br>
-
-|Code| Description|
-|----|-------------|
-|.read_csv| Read the CSV file.|
-|.show()|Used in Python's Matplotlib library to display the plot that has been created.|
-|.shape| Get the shape of a dataset. |
-|.info()| Get name, non-null count and data type for each column.|
-|.head| Display the first n amount of columns, n=5 by default.|
-|.astype(str column-name)| Convert column to specific or custom datatype.|
-|.describe() / .describe(include='all')| Get a summary of the count, mean, standard deviation, minimum, 25th percentile, 50th percentile (median), 75th percentile, and maximum for each numeric column in a dataset. When using include='all' non-numeric will be included in the calculations.|
-|.hist() / .hist( figsize = (int width, int heigth))| Show a frequency distribution of the data. The parameter figsze is used to determine the size of the diagram.|
-|.countplot(y=df['column_name'])| Show a frequency count of each unique category of column.|
-|.set()| Sets the default style to Seaborn's theme.|
-|.copy()| Create a copy of the current object.|
-|.drop()| Drop a column from a dataset.|
-|.pairplot(DataFrame df, y_vars=['column_name'],x=vars[int value1: value2])| Used to create a matrix of scatter plots that show the relationships between multiple variables in a dataset. y_vars=['column_name'] is the main variable and x=vars[int value1: value2] will be scatterd based y_vars=['column_name'].|
-|.corr()| Used to calculate the correlation between columns in a DataFrame.|
-|.drop_duplicates()| Remove duplicates from a DataFrame.|
-|.capitalize()| Capitalize the first letter of a word.|
-|.isnull| Returns if there are Null values in the DataFrame|
-|.sum| Count the values of the DataFrame|
-|.reshape()| Changing the layout or structure of the data, while keeping the content of the data intact|
-|.fit(Any df)| Method used to train a machine learning model on a dataset.|
-|.select_dtypes(include=['DataType', 'DataType'])| Method used to select columns from a dataframe based on their data type. |
-
 <div class="text-base gap-4 md:gap-6 m-auto md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0">
    <div class="w-[30px] flex flex-col relative items-end">
       <div class="relative h-[30px] w-[30px] p-1 rounded-sm text-white flex items-center justify-center" style="background-color: rgb(16, 163, 127);">
