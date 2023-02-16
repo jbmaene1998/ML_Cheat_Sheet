@@ -13,9 +13,6 @@ import  matplotlib  as  mpl
 import  matplotlib.pyplot  as  plt
 import  seaborn  as  sns
 plt.style.use('seaborn-darkgrid')
-
-from sklearn.impute import SimpleImputer
-from scipy.stats import skew
 ```
 <br>
 
