@@ -25,11 +25,11 @@ from scipy.stats import skew
    
 |Code| Description|
 |----|-------------|
-|.read_csv| Read the CSV file.|
+|.read_csv(str path_of_file)| Read the CSV file.|
 |.show()|Used in Python's Matplotlib library to display the plot that has been created.|
 |.shape| Get the shape of a dataset. |
 |.info()| Get name, non-null count and data type for each column.|
-|.head| Display the first n amount of columns, n=5 by default.|
+|.head(int value)| Display the first n amount of columns, n=5 by default.|
 |.astype(str column-name)| Convert column to specific or custom datatype.|
 |.describe() / .describe(include='all')| Get a summary of the count, mean, standard deviation, minimum, 25th percentile, 50th percentile (median), 75th percentile, and maximum for each numeric column in a dataset. When using include='all' non-numeric will be included in the calculations.|
 |.hist() / .hist( figsize = (int width, int heigth))| Show a frequency distribution of the data. The parameter figsze is used to determine the size of the diagram.|
@@ -136,5 +136,9 @@ df_sparse['column_name'].value_counts()
 - [ ] Group categorizable classes with the same meaning. You can use .astype(str column_name).
 - [ ] Check for outliners, check if the values are impossible or there was a typing error.
 - [ ] Check for missing values.
+- [ ] Create new feature
+- [ ] Combine sparse classes
 - [ ] Determine how to resolve missing values
-- [ ] Add dummy values if necessary
+- [ ] Add dummy values 
+- [ ] Do log transformation
+- [ ] Standardize continuous features
