@@ -22,14 +22,14 @@ from scipy.stats import skew
 ### **Code**
 
 <br>
-
+   
 |Code| Description|
 |----|-------------|
-|.read_csv| Read the CSV file.|
+|.read_csv(str path_of_file)| Read the CSV file.|
 |.show()|Used in Python's Matplotlib library to display the plot that has been created.|
 |.shape| Get the shape of a dataset. |
 |.info()| Get name, non-null count and data type for each column.|
-|.head| Display the first n amount of columns, n=5 by default.|
+|.head(int value)| Display the first n amount of columns, n=5 by default.|
 |.astype(str column-name)| Convert column to specific or custom datatype.|
 |.describe() / .describe(include='all')| Get a summary of the count, mean, standard deviation, minimum, 25th percentile, 50th percentile (median), 75th percentile, and maximum for each numeric column in a dataset. When using include='all' non-numeric will be included in the calculations.|
 |.hist() / .hist( figsize = (int width, int heigth))| Show a frequency distribution of the data. The parameter figsze is used to determine the size of the diagram.|
@@ -86,7 +86,42 @@ for col in df_imputed:
         df_imputed.drop(columns=[col], inplace=Boolean boolean)                                     # delete original feature
 ```
 
+<br>
 
+#### Replace NaN values with undefined:
+```python
+categorical = ['column_name1','column_name2', 'column_name3']
+
+
+for col in categorical:
+    df_imputed[col] = df_imputed[col].astype('category')
+    df_imputed[col] = df_imputed[col].cat.add_categories('Undefined')
+    df_imputed[col] = df_imputed[col].fillna('Undefined')
+    df_imputed[col] = df_imputed[col].astype('object')
+```
+
+
+<br>
+
+#### Merge multiple categories in 1 category
+```python
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+df_sparse['column_name'][df_sparse['column_name'] == 'old_category'] = 'new_category'
+```
+<br>
+
+<br>
+
+#### Merge multiple categories in 1 category based on a percentage
+```python
+threshold_percent = int value
+
+series = pd.value_counts(df_sparse['column_name'])
+mask = (series / series.sum() * 100).lt(threshold_percent)
+df_sparse['column_name']= np.where(df_sparse['column_name'].isin(series[mask].index),'new_category', df_sparse['column_name'])
+df_sparse['column_name'].value_counts()
+```
 <br>
 
 #### **Checklist data cleaning**
@@ -101,5 +136,9 @@ for col in df_imputed:
 - [ ] Group categorizable classes with the same meaning. You can use .astype(str column_name).
 - [ ] Check for outliners, check if the values are impossible or there was a typing error.
 - [ ] Check for missing values.
+- [ ] Create new feature
+- [ ] Combine sparse classes
 - [ ] Determine how to resolve missing values
-- [ ] Add dummy values if necessary
+- [ ] Add dummy values 
+- [ ] Do log transformation
+- [ ] Standardize continuous features
